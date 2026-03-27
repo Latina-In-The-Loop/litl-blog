@@ -20,6 +20,8 @@
 // ─── Site Header (dark) ───────────────────────────────────────────────────────
 .site-header {
   background: $color-dark;
+  width: 100%;
+  overflow: hidden;
   padding: 16px 48px;
   display: flex;
   align-items: center;
@@ -383,12 +385,15 @@
   }
 }
 
-.footer-logo {
-  font-family: $font-heading;
-  font-weight: 700;
-  font-size: 1.125rem;
-  color: #ffffff;
-  letter-spacing: 0.08em;
+.footer-logo-wrap {
+  display: inline-flex;
+  text-decoration: none;
+  &:hover { text-decoration: none; }
+
+  .logo-svg {
+    height: 28px;
+    width: auto;
+  }
 }
 
 .footer-tagline {

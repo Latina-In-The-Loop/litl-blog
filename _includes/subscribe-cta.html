@@ -1,13 +1,6 @@
 {% assign variant = include.variant | default: "" %}
-<div class="subscribe-embed{% if variant == 'sidebar' %} subscribe-embed--sidebar{% endif %}">
-  <p class="subscribe-embed__label">Stay in the loop</p>
-  <iframe
-    src="https://latinaintheloop.substack.com/embed"
-    width="480"
-    height="320"
-    style="border: 1px solid #EEE; background: white;"
-    frameborder="0"
-    scrolling="no"
-    title="Subscribe to Latina in the Loop">
-  </iframe>
+<div class="subscribe-cta-text{% if variant == 'sidebar' %} subscribe-cta-text--sidebar{% endif %}">
+  <p class="subscribe-cta-text__label">Stay in the loop</p>
+  <p class="subscribe-cta-text__body">Essays on building and governing intelligent systems &mdash; delivered free.</p>
+  <a href="https://latina-in-the-loop.substack.com" target="_blank" rel="noopener noreferrer" class="subscribe-cta-text__link">Subscribe on Substack &rarr;</a>
 </div>

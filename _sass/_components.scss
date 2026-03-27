@@ -334,37 +334,40 @@
   }
 }
 
-// ─── Subscribe Embed ──────────────────────────────────────────────────────────
-.subscribe-embed {
-  background: $color-warm-white;
-  border: 1px solid $color-rule;
-  border-radius: 12px;
-  padding: 28px 28px 20px;
 
+// ─── Subscribe CTA Text ───────────────────────────────────────────────────────
+.subscribe-cta-text {
   &__label {
     font-family: $font-mono;
     font-size: 9px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: $color-primary;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
-  iframe {
-    display: block;
-    width: 100%;
-    max-width: 480px;
-    border-radius: 6px;
+  &__body {
+    font-size: 14px;
+    color: $color-ink-light;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-weight: 300;
   }
 
-  // Sidebar variant — constrained width, no outer padding excess
-  &--sidebar {
-    padding: 24px 20px 16px;
-    margin-bottom: 24px;
+  &__link {
+    font-size: 14px;
+    font-weight: 500;
+    color: $color-primary;
+    text-decoration: none;
 
-    iframe {
-      height: 280px;
+    &:hover {
+      color: $color-terra-dark;
+      text-decoration: none;
     }
+  }
+
+  &--sidebar {
+    // no additional overrides needed — sidebar card provides the frame
   }
 }
 
