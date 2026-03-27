@@ -57,12 +57,7 @@ layout: default
   <aside class="sidebar">
 
     <!-- Subscribe -->
-    <div class="sidebar-card">
-      <p class="sidebar-label">Newsletter</p>
-      <h4>Stay in the loop</h4>
-      <p>Essays on AI systems, product decisions, and governance — from the inside.</p>
-      <a href="{{ site.substack }}" class="sidebar-btn" target="_blank" rel="noopener noreferrer">Subscribe on Substack →</a>
-    </div>
+    {% include subscribe-cta.html variant="sidebar" %}
 
     <!-- Archive -->
     <div class="sidebar-card">

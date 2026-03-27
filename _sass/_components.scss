@@ -330,7 +330,41 @@
   }
 }
 
-// ─── Subscribe CTA ────────────────────────────────────────────────────────────
+// ─── Subscribe Embed ──────────────────────────────────────────────────────────
+.subscribe-embed {
+  background: $color-warm-white;
+  border: 1px solid $color-rule;
+  border-radius: 12px;
+  padding: 28px 28px 20px;
+
+  &__label {
+    font-family: $font-mono;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: $color-primary;
+    margin-bottom: 16px;
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 6px;
+  }
+
+  // Sidebar variant — constrained width, no outer padding excess
+  &--sidebar {
+    padding: 24px 20px 16px;
+    margin-bottom: 24px;
+
+    iframe {
+      height: 280px;
+    }
+  }
+}
+
+// ─── Subscribe CTA (legacy dark block) ────────────────────────────────────────
 .subscribe-cta {
   background: $color-dark;
   color: $color-white;
