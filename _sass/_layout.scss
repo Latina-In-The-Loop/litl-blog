@@ -266,9 +266,10 @@
 }
 
 .post-content {
-  h2 { margin: $spacing-xl 0 $spacing-md; }
-  h3 { margin: $spacing-lg 0 $spacing-sm; }
-  p + p { margin-top: $spacing-md; }
+  h2 { margin: 2rem 0 0.75rem; }
+  h3 { margin: 1.5rem 0 0.5rem; }
+  p + p { margin-top: 0; }
+  h2 + p, h3 + p { margin-top: 0; }
 
   img {
     margin: $spacing-lg 0;

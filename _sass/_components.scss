@@ -176,10 +176,10 @@
   display: flex;
   align-items: center;
   gap: $spacing-md;
-  padding: $spacing-lg 0;
+  padding: $spacing-sm 0;
   border-top: 1px solid $color-light;
   border-bottom: 1px solid $color-light;
-  margin: $spacing-xl 0;
+  margin: $spacing-lg 0;
 
   &__name {
     font-weight: 600;
