@@ -12,8 +12,6 @@ You're reading. Watching. Taking courses. Chatting with LLMs. Collecting certifi
 
 I spent most of 2023 and 2024 in that loop. I understood the concepts. I could hold a conversation about agentic workflows, orchestration layers, and human-in-the-loop design. But I hadn't built anything that worked in the real world. That gap, between understanding AI and building systems that actually function, is the gap nobody talks about. Everyone is teaching you what AI is. Almost nobody is teaching you how to architect around it.
 
-. . .
-
 ## The Side Quest That Wasn't
 
 At some point I did something that felt completely unrelated. I stepped away from AI entirely and earned my Remote Pilot License. On the surface: a break. A hobby. A side quest.
@@ -24,8 +22,6 @@ A pilot doesn't manually control every variable. They don't flap the wings or ca
 
 > "I'd been practicing it at altitude. I just didn't have the vocabulary for it yet."
 
-. . .
-
 ## The Misconception Running the Market
 
 When I came back to AI, the conversation had shifted from Generative AI to Agentic AI. My first reaction: I'm behind. My second reaction, about two weeks later: actually, no. This is exactly the entry point I was waiting for.
@@ -34,14 +30,12 @@ Here's the misconception I keep seeing everywhere: that AI product success is a 
 
 The model is one component. It's not even the hardest component. The true differentiators are the layers underneath:
 
-- **Orchestration** — how multiple models and data sources are coordinated
-- **Guardrails** — the operational constraints that keep the system reliable
-- **Decision points** — the logic that navigates non-linear, messy real-world workflows
-- **Human-in-the-loop** — knowing exactly where to place human oversight, and why
+- **Orchestration** how multiple models and data sources are coordinated
+- **Guardrails** the operational constraints that keep the system reliable
+- **Decision points** the logic that navigates non-linear, messy real-world workflows
+- **Human-in-the-loop** knowing exactly where to place human oversight, and why
 
 Think of it this way: the model is the engine. The systems around it are everything else, the airframe, the instruments, the checklist, the pilot. An engine sitting on the ground doesn't go anywhere.
-
-. . .
 
 ## The Shift I Had to Make
 
@@ -76,8 +70,6 @@ Getting from traditional systems thinking to agentic AI required a real shift in
 
 People with backgrounds in workflow automation and systems thinking are unusually well-positioned to make this shift. The foundation is already there. The new skills are real, but they're not starting from zero.
 
-. . .
-
 ## What Building Actually Looks Like
 
 My own understanding crystallized through the Agentic AI Product Management program by Mahesh Yadav. This wasn't another course to absorb. It was a forcing function to build.
@@ -86,8 +78,6 @@ In practice, that meant writing PRDs not as feature lists, but as formal definit
 
 > "True clarity doesn't come from more reading. It comes from designing a system and watching it fail."
 
-. . .
-
 ## The Expertise You Already Have
 
 If you've been in operations, workflow automation, legal tech, or any domain where you managed complex processes with real stakes, you are not behind. You have something most AI-native builders don't: an intuition for what breaks in the real world.
@@ -95,8 +85,6 @@ If you've been in operations, workflow automation, legal tech, or any domain whe
 The failure is rarely in the logic. It's in the edge cases. The ambiguous inputs. The humans who don't respond the way the system expected. The third-party API that returns a 200 but sends you garbage. Agentic AI doesn't eliminate those problems. It inherits them. The people who will build the most resilient agentic systems aren't the ones who can write the best prompts. They're the ones who've seen enough systems break to know where to put the guardrails before anything goes wrong.
 
 That's the hidden value of a background in deterministic systems. You already know what it looks like when something silently fails.
-
-. . .
 
 ## Where I Am Now
 
