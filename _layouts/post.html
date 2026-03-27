@@ -1,0 +1,106 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="post-layout">
+
+    <!-- Main Content -->
+    <article class="post-main">
+
+      <!-- Post Header -->
+      <header class="post-header">
+        <div class="post-meta">
+          <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%B %-d, %Y" }}
+          </time>
+          {% if page.tags.size > 0 %}
+            <div class="post-tags">
+              {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+
+        <h1 class="post-title">{{ page.title }}</h1>
+
+        {% if page.subtitle %}
+          <p class="post-subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+      </header>
+
+      <!-- Author Byline -->
+      <div class="author-card">
+        <div>
+          <p class="author-card__name">{{ page.author | default: site.author }}</p>
+          <p class="author-card__bio">Building, questioning, and stewarding intelligent systems in real time.</p>
+        </div>
+      </div>
+
+      <!-- Post Body -->
+      <div class="post-content">
+        {{ content }}
+      </div>
+
+      <!-- Subscribe CTA -->
+      <div style="margin-top: 3rem;">
+        {% include subscribe-cta.html %}
+      </div>
+
+      <!-- Post Navigation -->
+      <nav class="post-nav" aria-label="Post navigation">
+        {% if page.previous.url %}
+          <a href="{{ page.previous.url | relative_url }}" class="nav-prev">
+            <span class="nav-label">&larr; Previous</span>
+            <span class="nav-title">{{ page.previous.title }}</span>
+          </a>
+        {% else %}
+          <div></div>
+        {% endif %}
+
+        {% if page.next.url %}
+          <a href="{{ page.next.url | relative_url }}" class="nav-next">
+            <span class="nav-label">Next &rarr;</span>
+            <span class="nav-title">{{ page.next.title }}</span>
+          </a>
+        {% endif %}
+      </nav>
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="post-sidebar">
+
+      <!-- Subscribe Widget -->
+      <div class="sidebar-widget">
+        {% include subscribe-cta.html variant="sidebar" %}
+      </div>
+
+      <!-- About Widget -->
+      <div class="sidebar-widget">
+        <p class="sidebar-widget__title">About LITL</p>
+        <p style="font-size: 0.875rem; color: #9A7560; line-height: 1.6;">
+          Essays on building AI systems, product decisions, and governance &mdash; from the inside.
+        </p>
+        <a href="{{ '/about/' | relative_url }}" style="font-size: 0.875rem; color: #C1622A; margin-top: 0.5rem; display: inline-block;">
+          About &rarr;
+        </a>
+      </div>
+
+      <!-- Tags Widget -->
+      {% if page.tags.size > 0 %}
+      <div class="sidebar-widget">
+        <p class="sidebar-widget__title">Tags</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.375rem;">
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+    </aside>
+
+  </div>
+</div>

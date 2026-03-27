@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="container--narrow" style="padding: 3rem 0;">
+    <header style="margin-bottom: 2.5rem;">
+      {% if page.title %}
+        <h1>{{ page.title }}</h1>
+      {% endif %}
+      {% if page.subtitle %}
+        <p style="font-family: 'Playfair Display', serif; font-style: italic; color: #9A7560; font-size: 1.15rem; margin-top: 0.5rem;">
+          {{ page.subtitle }}
+        </p>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </div>
+</div>

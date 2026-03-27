@@ -1,0 +1,257 @@
+// ─── Tag Pill ─────────────────────────────────────────────────────────────────
+.tag {
+  display: inline-block;
+  font-family: $font-mono;
+  font-size: 0.7rem;
+  text-transform: lowercase;
+  letter-spacing: 0.04em;
+  color: $color-accent;
+  background: $color-light;
+  padding: 0.2em 0.65em;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background $transition-base, color $transition-base;
+
+  &:hover {
+    background: rgba($color-primary, 0.12);
+    color: $color-primary;
+    text-decoration: none;
+  }
+}
+
+// ─── Post Card ────────────────────────────────────────────────────────────────
+.post-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $spacing-sm;
+  padding: $spacing-lg 0;
+  border-bottom: 1px solid $color-light;
+  text-decoration: none;
+
+  &:last-child { border-bottom: none; }
+
+  &:hover .post-card__title {
+    color: $color-primary;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    flex-wrap: wrap;
+  }
+
+  &__date {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: $color-accent;
+  }
+
+  &__tags {
+    display: flex;
+    gap: $spacing-xs;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $color-dark;
+    line-height: 1.25;
+    transition: color $transition-base;
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-style: italic;
+    color: $color-accent;
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  &__excerpt {
+    color: lighten($color-dark, 20%);
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  &__read-more {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $color-primary;
+  }
+
+  // Featured variant
+  &--featured {
+    padding: $spacing-xl;
+    background: $color-white;
+    border: 1px solid $color-light;
+    border-radius: 8px;
+    margin-bottom: $spacing-xl;
+
+    .post-card__label {
+      font-family: $font-mono;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: $color-primary;
+      margin-bottom: $spacing-md;
+    }
+
+    .post-card__title {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-bottom: $spacing-sm;
+    }
+
+    .post-card__subtitle {
+      font-size: 1.05rem;
+      margin-bottom: $spacing-md;
+    }
+  }
+}
+
+// ─── Subscribe CTA ────────────────────────────────────────────────────────────
+.subscribe-cta {
+  background: $color-dark;
+  color: $color-white;
+  padding: $spacing-xl;
+  border-radius: 8px;
+  text-align: center;
+
+  &__eyebrow {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba($color-white, 0.5);
+    margin-bottom: $spacing-md;
+  }
+
+  &__title {
+    font-family: $font-heading;
+    font-size: 1.5rem;
+    color: $color-white;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__description {
+    color: rgba($color-white, 0.7);
+    font-size: 0.95rem;
+    margin-bottom: $spacing-lg;
+  }
+
+  &__link {
+    display: inline-block;
+    background: $color-primary;
+    color: $color-white;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background $transition-base;
+
+    &:hover {
+      background: lighten($color-primary, 8%);
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+
+  // Sidebar variant — more compact
+  &--sidebar {
+    padding: $spacing-lg;
+    text-align: left;
+
+    .subscribe-cta__title { font-size: 1.1rem; }
+  }
+}
+
+// ─── Author Card ──────────────────────────────────────────────────────────────
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-lg 0;
+  border-top: 1px solid $color-light;
+  border-bottom: 1px solid $color-light;
+  margin: $spacing-xl 0;
+
+  &__name {
+    font-weight: 600;
+    color: $color-dark;
+    font-size: 0.95rem;
+  }
+
+  &__bio {
+    font-size: 0.875rem;
+    color: $color-accent;
+    margin: 0;
+  }
+}
+
+// ─── Sidebar Widget ───────────────────────────────────────────────────────────
+.sidebar-widget {
+  margin-bottom: $spacing-xl;
+
+  &__title {
+    font-family: $font-mono;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: $color-accent;
+    margin-bottom: $spacing-md;
+    padding-bottom: $spacing-sm;
+    border-bottom: 1px solid $color-light;
+  }
+}
+
+// ─── Buttons ──────────────────────────────────────────────────────────────────
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-sm;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background $transition-base, color $transition-base, border-color $transition-base;
+  border: 1px solid transparent;
+
+  &--primary {
+    background: $color-primary;
+    color: $color-white;
+
+    &:hover {
+      background: darken($color-primary, 10%);
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    color: $color-primary;
+    border-color: $color-primary;
+
+    &:hover {
+      background: $color-primary;
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+}
+
+// ─── Post List (compact) ──────────────────────────────────────────────────────
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

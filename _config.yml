@@ -1,0 +1,56 @@
+title: Latina in the Loop
+description: Building, questioning, and stewarding intelligent systems in real time
+url: https://latinaintheloop.com
+baseurl: ""
+
+author: Latina in the Loop
+email: ""
+substack: https://latina-in-the-loop.substack.com
+twitter: ""
+linkedin: ""
+github: ""
+
+# Build settings
+theme: null
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Permalinks
+permalink: /blog/:year/:month/:day/:title/
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - scripts
+  - README.md
+  - .gitignore
+
+# Collections
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Latina in the Loop

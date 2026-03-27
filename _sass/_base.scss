@@ -1,0 +1,114 @@
+// ─── Reset & Base ─────────────────────────────────────────────────────────────
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-body;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $color-dark;
+  background-color: $color-background;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ─── Typography ───────────────────────────────────────────────────────────────
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-dark;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
+h4 { font-size: 1.125rem; }
+
+p {
+  margin-bottom: $spacing-md;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: darken($color-primary, 12%);
+    text-decoration: underline;
+  }
+}
+
+strong { font-weight: 600; }
+em { font-style: italic; }
+
+code, kbd, samp {
+  font-family: $font-mono;
+  font-size: 0.875em;
+  background: $color-light;
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  font-family: $font-mono;
+  font-size: 0.875rem;
+  background: $color-dark;
+  color: $color-background;
+  padding: $spacing-lg;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: $spacing-lg;
+
+  code {
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+  }
+}
+
+blockquote {
+  border-left: 3px solid $color-primary;
+  padding-left: $spacing-lg;
+  margin: $spacing-lg 0;
+  color: $color-accent;
+  font-style: italic;
+  font-family: $font-heading;
+  font-size: 1.125rem;
+}
+
+ul, ol {
+  padding-left: $spacing-lg;
+  margin-bottom: $spacing-md;
+
+  li {
+    margin-bottom: $spacing-sm;
+  }
+}
+
+hr {
+  border: none;
+  border-top: 1px solid $color-light;
+  margin: $spacing-xl 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ─── Selection ────────────────────────────────────────────────────────────────
+::selection {
+  background: rgba($color-primary, 0.2);
+  color: $color-dark;
+}

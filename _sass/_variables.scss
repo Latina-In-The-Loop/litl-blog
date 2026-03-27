@@ -1,0 +1,37 @@
+// ─── Brand Colors ─────────────────────────────────────────────────────────────
+$color-primary:    #C1622A;   // terracotta
+$color-background: #FAF6F0;   // warm cream
+$color-dark:       #0D0D0D;   // near black
+$color-accent:     #9A7560;   // muted brown
+$color-light:      #F0E8DF;   // light cream (borders, subtle bg)
+$color-white:      #FFFFFF;
+
+// ─── Typography ───────────────────────────────────────────────────────────────
+$font-heading:  'Playfair Display', Georgia, serif;
+$font-body:     'DM Sans', system-ui, -apple-system, sans-serif;
+$font-mono:     'DM Mono', 'Courier New', monospace;
+
+$font-size-base: 1rem;       // 16px
+$line-height-base: 1.7;
+
+// ─── Spacing ──────────────────────────────────────────────────────────────────
+$spacing-xs:  0.25rem;
+$spacing-sm:  0.5rem;
+$spacing-md:  1rem;
+$spacing-lg:  2rem;
+$spacing-xl:  4rem;
+$spacing-2xl: 6rem;
+
+// ─── Layout ───────────────────────────────────────────────────────────────────
+$max-width:       1120px;
+$content-width:   720px;
+$sidebar-width:   280px;
+
+// ─── Breakpoints ──────────────────────────────────────────────────────────────
+$bp-sm:  576px;
+$bp-md:  768px;
+$bp-lg:  1024px;
+$bp-xl:  1280px;
+
+// ─── Transitions ──────────────────────────────────────────────────────────────
+$transition-base: 0.2s ease;

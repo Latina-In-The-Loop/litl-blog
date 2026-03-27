@@ -1,0 +1,11 @@
+{% assign variant = include.variant | default: "" %}
+<div class="subscribe-cta{% if variant == 'sidebar' %} subscribe-cta--sidebar{% endif %}">
+  <p class="subscribe-cta__eyebrow">Newsletter</p>
+  <h3 class="subscribe-cta__title">Stay in the loop</h3>
+  <p class="subscribe-cta__description">
+    Essays on building, questioning, and stewarding intelligent systems &mdash; delivered to your inbox.
+  </p>
+  <a href="{{ site.substack }}" target="_blank" rel="noopener noreferrer" class="subscribe-cta__link">
+    Subscribe on Substack
+  </a>
+</div>

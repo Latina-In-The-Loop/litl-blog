@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container container--narrow">
+    <!-- Logo mark -->
+    <div class="hero-logo">
+      <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M16 10 L44 40 L16 70" stroke="#C1622A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M38 10 L66 40 L38 70" stroke="#C1622A" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.4"/>
+      </svg>
+    </div>
+
+    <p class="hero-tagline">{{ site.description }}</p>
+    <p class="hero-sub">Essays on AI systems, product decisions, and the people building them.</p>
+    <a href="{{ site.substack }}" target="_blank" rel="noopener noreferrer" class="hero-cta">
+      Subscribe &rarr;
+    </a>
+  </div>
+</section>
+
+<!-- Featured Post -->
+{% assign featured_post = site.posts.first %}
+{% if featured_post %}
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">Latest</span>
+      <a href="{{ '/blog/' | relative_url }}" class="section-link">All posts &rarr;</a>
+    </div>
+    {% include post-card.html post=featured_post featured=true %}
+  </div>
+</section>
+{% endif %}
+
+<!-- All Posts -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-title">All Posts</span>
+    </div>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>{% include post-card.html post=post %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- About Snippet -->
+<section class="section" style="background: #F5EEE6; padding-top: 3rem; padding-bottom: 3rem; margin-top: 2rem;">
+  <div class="container container--narrow" style="text-align: center;">
+    <div class="section-header" style="justify-content: center; border: none; margin-bottom: 1rem;">
+      <span class="section-title">About</span>
+    </div>
+    <p style="font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #0D0D0D; line-height: 1.6; margin-bottom: 1.5rem;">
+      <!-- Placeholder — fill in your bio here -->
+      I'm a technologist and product leader working at the intersection of AI, systems, and people. I write about what it actually takes to build and govern intelligent systems in the real world.
+    </p>
+    <a href="{{ '/about/' | relative_url }}" class="btn btn--outline">More about me &rarr;</a>
+  </div>
+</section>
+
+<!-- Subscribe -->
+<section class="section">
+  <div class="container container--narrow">
+    {% include subscribe-cta.html %}
+  </div>
+</section>
+
+{{ content }}
