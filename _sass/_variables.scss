@@ -1,18 +1,32 @@
 // ─── Brand Colors ─────────────────────────────────────────────────────────────
-$color-primary:    #C1622A;   // terracotta
-$color-background: #FAF6F0;   // warm cream
-$color-dark:       #0D0D0D;   // near black
-$color-accent:     #9A7560;   // muted brown
-$color-light:      #F0E8DF;   // light cream (borders, subtle bg)
-$color-white:      #FFFFFF;
+$color-primary:     #C1622A;   // terracotta
+$color-terra-light: #D4845E;   // terracotta light (italic em in hero)
+$color-terra-dark:  #8B3E1F;   // terracotta dark
+$color-terra-pale:  #F5ECE5;   // terracotta pale (tag bg)
+
+$color-background:  #FAF6F0;   // warm cream
+$color-warm-white:  #FFFDF9;   // card background
+$color-dark:        #0D0D0D;   // near black (header, footer, dark panels)
+$color-white:       #FFFFFF;
+
+$color-ink:         #1A1008;   // body text
+$color-ink-mid:     #5C3D2A;   // pull quote text, mid emphasis
+$color-ink-light:   #9A7560;   // secondary text, labels
+
+$color-rule:        #E8D5C4;   // borders, rules
+
+// Legacy aliases (used in home/blog/about layouts)
+$color-accent:      $color-ink-light;
+$color-light:       $color-rule;
 
 // ─── Typography ───────────────────────────────────────────────────────────────
 $font-heading:  'Playfair Display', Georgia, serif;
 $font-body:     'DM Sans', system-ui, -apple-system, sans-serif;
 $font-mono:     'DM Mono', 'Courier New', monospace;
 
-$font-size-base: 1rem;       // 16px
-$line-height-base: 1.7;
+$font-size-base:    1.125rem;  // 18px
+$line-height-base:  1.85;
+$font-weight-body:  300;
 
 // ─── Spacing ──────────────────────────────────────────────────────────────────
 $spacing-xs:  0.25rem;
@@ -24,8 +38,8 @@ $spacing-2xl: 6rem;
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
 $max-width:       1120px;
-$content-width:   720px;
-$sidebar-width:   280px;
+$content-width:   660px;
+$sidebar-width:   290px;
 
 // ─── Breakpoints ──────────────────────────────────────────────────────────────
 $bp-sm:  576px;

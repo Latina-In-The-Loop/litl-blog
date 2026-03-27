@@ -13,8 +13,9 @@ html {
 body {
   font-family: $font-body;
   font-size: $font-size-base;
+  font-weight: $font-weight-body;
   line-height: $line-height-base;
-  color: $color-dark;
+  color: $color-ink;
   background-color: $color-background;
   -webkit-font-smoothing: antialiased;
 }
@@ -24,7 +25,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-heading;
   font-weight: 700;
   line-height: 1.2;
-  color: $color-dark;
+  color: $color-ink;
 }
 
 h1 { font-size: clamp(2rem, 5vw, 3rem); }
@@ -33,7 +34,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); }
 h4 { font-size: 1.125rem; }
 
 p {
-  margin-bottom: $spacing-md;
+  margin-bottom: 1.625rem;
 }
 
 a {
@@ -42,18 +43,18 @@ a {
   transition: color $transition-base;
 
   &:hover {
-    color: darken($color-primary, 12%);
+    color: $color-terra-dark;
     text-decoration: underline;
   }
 }
 
-strong { font-weight: 600; }
+strong { font-weight: 500; }
 em { font-style: italic; }
 
 code, kbd, samp {
   font-family: $font-mono;
   font-size: 0.875em;
-  background: $color-light;
+  background: $color-terra-pale;
   padding: 0.15em 0.4em;
   border-radius: 3px;
 }
@@ -80,7 +81,7 @@ blockquote {
   border-left: 3px solid $color-primary;
   padding-left: $spacing-lg;
   margin: $spacing-lg 0;
-  color: $color-accent;
+  color: $color-ink-mid;
   font-style: italic;
   font-family: $font-heading;
   font-size: 1.125rem;
@@ -97,7 +98,7 @@ ul, ol {
 
 hr {
   border: none;
-  border-top: 1px solid $color-light;
+  border-top: 1px solid $color-rule;
   margin: $spacing-xl 0;
 }
 
@@ -110,5 +111,5 @@ img {
 // ─── Selection ────────────────────────────────────────────────────────────────
 ::selection {
   background: rgba($color-primary, 0.2);
-  color: $color-dark;
+  color: $color-ink;
 }
