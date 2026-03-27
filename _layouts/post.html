@@ -64,24 +64,34 @@ layout: default
       <a href="{{ site.substack }}" class="sidebar-btn" target="_blank" rel="noopener noreferrer">Subscribe on Substack →</a>
     </div>
 
-    <!-- Tags -->
-    {% if page.tags.size > 0 %}
+    <!-- Archive -->
     <div class="sidebar-card">
-      <p class="sidebar-label">Tags</p>
-      <div class="tag-row">
-        {% for tag in page.tags %}
-          <span class="tag">{{ tag }}</span>
+      <p class="sidebar-label">Archive</p>
+      <ul class="sidebar-post-list">
+        {% for post in site.posts limit:3 %}
+          <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
         {% endfor %}
-      </div>
+      </ul>
     </div>
-    {% endif %}
 
-    <!-- About -->
-    <div class="sidebar-card sidebar-card--dark">
-      <p class="sidebar-label">About</p>
-      <h4>Latina in the Loop</h4>
-      <p>Building, questioning, and stewarding intelligent systems in real time.</p>
-      <a href="{{ '/about/' | relative_url }}" class="sidebar-btn">Learn more →</a>
+    <!-- Dark shifts panel -->
+    <div class="shift-table">
+      <h3>Three Architectural Movements</h3>
+      <div class="shift-row">
+        <span class="shift-from">Deterministic</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">Probabilistic</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">Execution</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">Governance</span>
+      </div>
+      <div class="shift-row">
+        <span class="shift-from">Tools</span>
+        <span class="shift-arrow">→</span>
+        <span class="shift-to">Orchestration</span>
+      </div>
     </div>
 
   </aside>

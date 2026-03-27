@@ -190,7 +190,7 @@
   padding: 72px 48px;
   display: grid;
   grid-template-columns: 1fr $sidebar-width;
-  gap: 80px;
+  gap: 88px;
   align-items: start;
 
   @media (max-width: $bp-lg) {
@@ -209,7 +209,7 @@
   max-width: $content-width;
 
   p {
-    font-size: 17px;
+    font-size: 18px;
     line-height: 1.85;
     color: $color-ink;
     margin-bottom: 26px;
@@ -245,6 +245,67 @@
   }
 
   h2 + p, h3 + p { margin-top: 0; }
+
+  // Arrow lists — applies to all ul and ol in prose
+  ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    li {
+      display: flex;
+      gap: 14px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: $color-ink;
+      font-weight: 300;
+
+      &::before {
+        content: '→';
+        color: $color-primary;
+        font-weight: 500;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+
+  // Blockquote as pull quote
+  blockquote {
+    border-left: 3px solid $color-primary;
+    padding: 20px 0 20px 30px;
+    margin: 40px 0;
+    font-family: $font-heading;
+    font-size: 22px;
+    font-style: italic;
+    color: $color-ink-mid;
+    line-height: 1.5;
+
+    p {
+      font-size: 22px;
+      font-style: italic;
+      color: $color-ink-mid;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+
+    em, cite {
+      display: block;
+      font-style: normal;
+      color: $color-terra-dark;
+      margin-top: 10px;
+      font-size: 15px;
+      font-family: $font-body;
+      font-weight: 300;
+    }
+  }
 }
 
 // ─── Sidebar ──────────────────────────────────────────────────────────────────

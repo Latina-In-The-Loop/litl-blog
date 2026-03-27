@@ -87,8 +87,8 @@
 // ─── Shift Table (dark panel) ─────────────────────────────────────────────────
 .shift-table {
   background: $color-dark;
-  border-radius: 12px;
-  padding: 36px 40px;
+  border-radius: 14px;
+  padding: 40px 44px;
   margin: 40px 0;
 
   h3 {
@@ -133,10 +133,40 @@
 }
 
 .shift-desc {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.38);
   font-size: 12px;
   margin-top: 4px;
   font-style: italic;
+}
+
+// ─── Sidebar Post List (archive) ──────────────────────────────────────────────
+.sidebar-post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    padding: 9px 0;
+    border-bottom: 1px solid $color-rule;
+
+    &:first-child { padding-top: 0; }
+    &:last-child { border-bottom: none; padding-bottom: 0; }
+
+    a {
+      font-size: 13px;
+      color: $color-ink;
+      line-height: 1.4;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        color: $color-primary;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 // ─── Sidebar Card ─────────────────────────────────────────────────────────────

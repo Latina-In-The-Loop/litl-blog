@@ -69,11 +69,7 @@ Getting from traditional systems thinking to agentic AI required a real shift. N
 
 Three things had to change in how I think:
 
-**Deterministic to Probabilistic.** I spent years building workflows with clear if-then logic. Rigid, predictable, auditable. Agentic systems don't work that way. They generate. They hallucinate. They drift. You're no longer writing rules — you're managing uncertainty and building the fences that keep unpredictability inside acceptable bounds.
-
-**Execution to Governance.** I'm no longer the operator of a process. I'm the regulator of one. The system runs. My job is to define how it's allowed to run, what it's allowed to touch, when it has to stop and ask.
-
-**Tools to Orchestration.** A single tool does a task. An orchestrated system manages the interaction between tools — and that interaction is where most of the complexity lives.
+{% include shifts.html %}
 
 This bridge is what people with backgrounds in workflow automation and systems thinking are uniquely positioned to cross.
 
