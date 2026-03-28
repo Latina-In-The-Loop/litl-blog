@@ -30,10 +30,6 @@ A moderation case brought this home. The cost of error could far exceed the cost
 
 When we argued about AI versus rules-based systems, it wasn't really about accuracy anymore. It was about transparency, bias, accountability, and ethics. Once AI systems make decisions, they stop being just technical artifacts. They become governance systems. Someone always owns the consequences, even when the model doesn't explain them cleanly.
 
-## SaaS Isn't Dying, It's Shifting
-
-Another insight surfaced during the week: AI doesn't kill SaaS, it transforms it. Agents orchestrate SaaS tools; they draw power from context, not just computation. The moat isn't model access anymore. It's understanding, history, and domain depth.
-
 ## The Art of Arguing with Conviction
 
 When our instructor kept challenging our assumptions, it started to feel like satire, an endless back-and-forth with no winning move. But that was the point. It wasn't about compliance with a framework. It was about articulation, confidence, and learning to stand your ground when the stakes and the ambiguity are both high. Frameworks guide, but articulation convinces.
