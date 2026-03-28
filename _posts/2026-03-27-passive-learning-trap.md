@@ -14,29 +14,21 @@ I spent most of 2023 and 2024 in that loop. I understood the concepts. I could h
 
 ## The Side Quest That Wasn't
 
-At some point I did something that felt completely unrelated. I stepped away from AI entirely and earned my Remote Pilot License. On the surface: a break. A hobby. A side quest.
-
-Getting my Remote Pilot License forced me to think differently.
+At some point I did something that felt completely unrelated. I stepped away from AI entirely and earned my Remote Pilot License. On the surface: a break. A hobby. A side quest. Getting my Remote Pilot License forced me to think differently.
 
 A pilot doesn’t control everything directly. They operate inside a changing environment with rules, constraints, and incomplete information. Weather shifts. Conditions change. What looked straightforward a few minutes ago can become a bad decision once you factor in airspace, visibility, battery life, or what is happening on the ground.
 
 The job is not to force certainty where there isn’t any. The job is to make sound decisions with the information you have, while staying inside the boundaries that keep people safe.
 
-> My thinking about systems was upgraded.
+Flying a drone is not just about knowing how to move it. It is about judgment, restraint, and situational awareness. You are constantly assessing what matters, what might change, and whether the conditions still support the decision you were about to make. Sometimes the right move is to continue. Sometimes it is to pause. Sometimes it is not to fly at all. That feels much closer to the challenge of building AI systems than I expected.
 
-Flying a drone is not just about knowing how to move it. It is about judgment, restraint, and situational awareness. You are constantly assessing what matters, what might change, and whether the conditions still support the decision you were about to make. Sometimes the right move is to continue. Sometimes it is to pause. Sometimes it is not to fly at all.
-
-That feels much closer to the challenge of building AI systems than I expected.
-
-With agentic systems, a model response is only one part of the decision. The system still has to determine whether there is enough information to continue. What is the system allowed to do? What should trigger escalation? Where does human review belong? What happens when the information is incomplete, the output is shaky, or the environment changes halfway through the task?
-
-That is the shift I’m starting to see more clearly. In both cases, the work is not just execution. It is governance.
+With agentic systems, a model response is only one part of the decision. The system still has to determine whether there is enough information to continue. What is the system allowed to do? What should trigger escalation? Where does human review belong? What happens when the information is incomplete, the output is shaky, or the environment changes halfway through the task? I started to see the same pattern in both. The work is execution, but it is also governance.
 
 > "I'd been practicing it at altitude. I just didn't have the vocabulary for it yet."
 
 ## The Misconception Running the Market
 
-When I came back to AI, the conversation had shifted from Generative AI to Agentic AI. My first reaction: I'm behind. My second reaction, about two weeks later: actually, no. This is exactly the entry point I was waiting for.
+When I came back to AI, I started noticing a pattern in how people were talking about it. My first reaction: I'm behind. My second reaction, about two weeks later: actually, no. This is exactly the entry point I was waiting for.
 
 Here's the misconception I keep seeing everywhere: that AI product success is a function of the model. That the team with access to the most powerful, highest-benchmark model wins. It's the wrong frame, and I think it's sending a lot of people in the wrong direction.
 
@@ -90,14 +82,6 @@ The program started the following week and ran for six intense weeks. That’s w
 
 > "True clarity doesn't come from more reading. It comes from designing a system and watching it fail."
 
-## The Expertise You Already Have
-
-If you’ve worked in operations, workflow automation, legal tech, or any environment where processes carry real consequences, I don’t think you’re starting from scratch. You’ve probably already developed an instinct for where things break once they meet real conditions.
-
-In my experience, the breakdown shows up in edge cases, ambiguous inputs, people who respond late or unpredictably, and external systems that technically return a success while still giving you something unusable. Agentic AI doesn’t remove those problems. It adds a new layer on top of them.
-
-That’s part of why experience with deterministic systems still matters. You already know what silent failure looks like. You know how much damage a small assumption can do once it gets embedded in a workflow.
-
 ## Where I Am Now
 
 I’m building now. Not perfectly, but for real. GigOps, the agentic booking coordinator I wrote about in the last post, is the first agentic system I’ve shipped using these principles. It has decision logic, human approval gates, and an architecture I can keep changing without having to rebuild the whole thing each time. The program gave me a framework and language for what I was doing. The build showed me where that thinking held up and where it didn’t.
@@ -107,6 +91,14 @@ If you’ve been stuck in the passive learning loop, reading, absorbing, waiting
 That’s the part that feels familiar to me. Governing a system under real conditions is not new. A lot of us have been doing some version of that for years.
 
 *What changed my thinking wasn’t more material. It was having something real to govern.*
+
+## The Expertise You Already Have
+
+If you’ve worked in operations, workflow automation, legal tech, or any environment where processes carry real consequences, I don’t think you’re starting from scratch. You’ve probably already developed an instinct for where things break once they meet real conditions.
+
+In my experience, the breakdown shows up in edge cases, ambiguous inputs, people who respond late or unpredictably, and external systems that technically return a success while still giving you something unusable. Agentic AI doesn’t remove those problems. It adds a new layer on top of them.
+
+That’s part of why experience with deterministic systems still matters. You already know what silent failure looks like. You know how much damage a small assumption can do once it gets embedded in a workflow.
 
 ---
 
