@@ -22,7 +22,7 @@ A pilot doesn’t control everything directly. They operate inside a changing en
 
 The job is not to force certainty where there isn’t any. The job is to make sound decisions with the information you have, while staying inside the boundaries that keep people safe.
 
-That changed the way I think about systems.
+> My thinking about systems was upgraded.
 
 Flying a drone is not just about knowing how to move it. It is about judgment, restraint, and situational awareness. You are constantly assessing what matters, what might change, and whether the conditions still support the decision you were about to make. Sometimes the right move is to continue. Sometimes it is to pause. Sometimes it is not to fly at all.
 
