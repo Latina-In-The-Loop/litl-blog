@@ -12,7 +12,7 @@ You've been sketching on whiteboards, or in your head, or in a ChatGPT thread. Y
 
 Then you open your terminal and the clock starts.
 
-This is the story of what happened next.
+This is what happened next.
 
 ## The Idea: GigOps
 
@@ -21,6 +21,16 @@ My husband plays in a working band. Not a famous one (yet). The kind that does w
 The coordination overhead is absurd. And it's almost entirely mechanical: the same questions, the same back-and-forth, the same status tracking. A human shouldn't be doing this. An AI should.
 
 So I started building GigOps: an agentic AI coordinator that takes a booking inquiry and moves it through every stage of the process, from first contact to confirmed gig, without anyone manually herding it along. The dream version runs quietly in the background, sends the right emails at the right time, checks the calendar, and only surfaces something to a human when a real decision needs to be made. Everything else: handled.
+
+## What I'm Actually Building
+
+GigOps is a booking coordinator for a working band. That's the specific use case. But the pattern it represents is much broader.
+
+There are hundreds of small service businesses — bands, photographers, caterers, DJs, videographers, event planners — where a significant fraction of the owner's time goes to coordination overhead. Email chains. Calendar checks. Follow-up messages. Status tracking. None of this requires judgment. All of it requires attention.
+
+AI agents are well suited to this class of problem. The tasks are structured enough to automate but varied enough that rules-based systems break down. The cost of errors is low enough to tolerate occasional mistakes. And the humans involved, the clients, the vendor contacts, the band members, don't need to know an agent is coordinating. They just need to get the right message at the right time.
+
+This is what agentic AI looks like in practice right now: not the flashy demos, but the quiet automation of the coordination layer in small businesses that can't afford operations staff. GigOps is my first version of that. The pattern shows up in a lot of places once you start looking for it.
 
 ## The Architecture Decision That Will Save Me Later
 
@@ -46,7 +56,7 @@ This isn't a permanent choice. It's a right-now choice. Future me will swap it o
 
 ## The Part Nobody Writes About: Credential Hell
 
-Here's the section I wish I'd had before I started.
+This is where the build slowed down more than I expected.
 
 Setting up the authentication and credential stack took longer than scaffolding the entire application. And it's not because it's hard. It's because the failure modes are subtle and the error messages are unhelpful.
 
@@ -54,35 +64,21 @@ The system I'm building needs to touch several Google services: calendar, email,
 
 Sending email from a personal Gmail address is genuinely annoying to set up. The standard approach for server-to-server Google authentication doesn't work for personal Gmail accounts. You need a different flow entirely: set up an OAuth consent screen, register yourself as a test user, run a local authorization process, and capture a token you can store and reuse.
 
-> **THE TRAP**
->
-> There's an ordering dependency early in this process that isn't documented anywhere obvious. Skip it, and you get a cryptic error that gives you no useful information about what actually went wrong. Do it in the right order, and it works first time.
+> There's an ordering dependency early in this process that isn't documented anywhere obvious. Skip it, and you get a cryptic error with no useful signal. Do it in the right order, and it works immediately.
 
 If you're building anything that integrates with Google services and you're running on Windows, there's also a PowerShell configuration step that will silently block your scripts from running until you fix it. One command, run once, and it's done — but only if you know to look for it.
 
-> **NEXT POST**
->
-> I'll write up the full step-by-step Google auth setup: the exact sequence, the traps, and the Windows fix. It's genuinely useful and not well documented anywhere.
+> I’ll write up the full setup separately. It’s the kind of thing you only understand after you’ve tripped over it once.
 
 ## On Using AI Tools to Build AI Tools
 
 I used an AI coding tool for most of this build, one that takes a prompt and runs with it inside your terminal and codebase.
 
-The thing I learned about working with these tools is counterintuitive: the tool matters less than the prompt. Whether you use Claude Code, Cursor, Windsurf, Gemini Code Assist, or any of the others, if you give it a clear, structured brief that specifies how the code should be organized, what conventions to follow, and what behavior you want, the output is remarkably similar across tools. The brief is the artifact. The tool is interchangeable.
+What this build made clear is that the tool matters less than the prompt. Whether you use Claude Code, Cursor, Windsurf, Gemini Code Assist, or any of the others, if you give it a clear, structured brief that specifies how the code should be organized, what conventions to follow, and what behavior you want, the output is remarkably similar across tools. The brief is the artifact. The tool is interchangeable.
 
 I'm not loyal to a tool. I'm loyal to the brief.
 
 The brief I wrote for GigOps is broken into sequenced parts. Each one gives the model a focused slice of the problem without overwhelming it. Each part has a clear completion condition before moving to the next. This isn't just good practice for working with AI. It's good practice for working with yourself. Breaking a build into sequenced parts with clear completion criteria is how you stay out of the weeds.
-
-## What I'm Actually Building, and Why It Matters More Than You Think
-
-GigOps is a booking coordinator for a working band. That's the specific use case. But the pattern it represents is much broader.
-
-There are hundreds of small service businesses — bands, photographers, caterers, DJs, videographers, event planners — where a significant fraction of the owner's time goes to coordination overhead. Email chains. Calendar checks. Follow-up messages. Status tracking. None of this requires judgment. All of it requires attention.
-
-AI agents are well suited to this class of problem. The tasks are structured enough to automate but varied enough that rules-based systems break down. The cost of errors is low enough to tolerate occasional mistakes. And the humans involved, the clients, the vendor contacts, the band members, don't need to know an agent is coordinating. They just need to get the right message at the right time.
-
-This is what agentic AI looks like in practice right now: not the flashy demos, but the quiet automation of the coordination layer in small businesses that can't afford operations staff. GigOps is my first version of that, but anyone building in this space is working on the same insight.
 
 ## The Honest Part
 
@@ -92,15 +88,13 @@ The email integration is more fragile than I'd like. I've confirmed the authoriz
 
 None of this is failure. It's just the honest shape of a build in progress. The structural decisions are made. The hard infrastructure work is done. The foundation will hold.
 
-## 5 Things to Take Away
+What I expected going in was that the challenge would be getting the system to work.
 
-1. **Architecture is a bet on what will change.** Build a layer of separation between your app and its dependencies. Swapping infrastructure should be boring, not painful.
-2. **Boring infrastructure is fine.** Pragmatic is not embarrassing. Pick the thing that lets you move fastest without locking you in.
-3. **Credential setup will take longer than you think.** Budget a full session for auth alone. Document everything as you go.
-4. **The tool is not the brief.** A clear, structured prompt is the real artifact. Write it well, break it into parts, and the choice of AI coding tool becomes almost irrelevant.
-5. **Log everything first.** Whatever storage you're using, write to the event log before doing anything else. It's your safety net when things go sideways.
+What I ran into instead was everything around it: structure, sequencing, constraints, and the parts no demo shows.
 
-*The structural decisions are made. The hard infrastructure work is done. The foundation will hold.*
+The model was the easiest part. So far.
+
+*The structure is in place. The foundation will hold.*
 
 ---
 
